@@ -72,7 +72,6 @@ ctx.arc(400, 250, 10, 0, 2 * Math.PI);
 ctx.fill();
 
 // Outlined Circle for Left Eye Socket
-
 ctx.strokeStyle = "rgb(100, 100, 100)";
 strokeCircle(200, 250, 50)
 
@@ -83,10 +82,7 @@ ctx.stroke();
 
 // Line for Left Eyebrow
 ctx.lineWidth = 2;
-ctx.beginPath();
-ctx.moveTo(150, 180);
-ctx.lineTo(250, 180);
-ctx.stroke();
+strokeLine(150, 180, 250, 180);
 
 // Line for Right Eyebrow
 ctx.beginPath();
@@ -128,5 +124,12 @@ function strokeCircle (x, y, r) {
     ctx.beginPath();
 ctx.arc(x, y, r, 0, 2 * Math.PI);
 ctx.stroke();
+}
+
+function strokeLine(x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
 }
 
